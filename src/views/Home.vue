@@ -15,9 +15,10 @@ const meals = ref([]);
 
 onMounted(async () => {
   for (let i = 0; i < 12; i++) {
-    axiosClient
-      .get(`random.php`)
-      .then(({ data }) => meals.value.push(data.meals[0]));
+    const { data } = await axiosClient.get(`random.php`);
+    meals.value.push(data.meals[0]);
+    // Trigger Vue reactivity
+    meals.value = [...meals.value];
   }
 });
 </script>

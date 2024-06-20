@@ -93,44 +93,44 @@ onMounted(() => {
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
-  border-radius: 8px; /* Rounded corners */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and box-shadow */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .meal-image-container:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);
 }
 
 .meal-image {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
 }
 
 .meal-details {
-  border-radius: 8px; /* Rounded corners */
-  background-color: #e7e5e5; /* Light gray background */
-  padding: 1rem; /* Add padding for spacing */
+  border-radius: 8px;
+  background-color: #e7e5e5;
+  padding: 1rem;
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for transform and box-shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .meal-details:hover {
-  transform: scale(1.05); /* Zoom effect on hover */
+  transform: scale(1.05);
 }
 
 .meal-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #ff6600; /* Orange color */
+  color: #ff6600;
 }
 
 .meal-info {
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem;
   margin-top: 1rem;
 }
 
@@ -144,12 +144,11 @@ onMounted(() => {
 
 .meal-instructions {
   margin-top: 1rem;
-  border-radius: 8px; /* Rounded corners */
-  background-color: #e7e5e5; /* Light gray background */
-  padding: 1rem; /* Add padding for spacing */
-  white-space: pre-line; /* Preserve line breaks */
+  border-radius: 8px;
+  background-color: #e7e5e5;
+  padding: 1rem;
+  white-space: pre-line;
 }
-
 
 .ingredients-and-external-links {
   display: grid;
@@ -181,7 +180,7 @@ onMounted(() => {
   padding: 0.75rem;
   border: 2px solid transparent;
   border-radius: 4px;
-  color: #4b0082; /* Indigo color */
+  color: #4b0082;
   text-decoration: none;
   transition: border-color 0.3s ease;
 }
@@ -190,7 +189,19 @@ onMounted(() => {
   border-color: #4b0082;
 }
 
-.capitlize{
+.capitlize {
   text-transform: capitalize;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Change to single column */
+  }
+
+  .ingredients-and-external-links {
+    grid-template-columns: 1fr; /* Change to single column */
+  }
+}
 </style>
+
