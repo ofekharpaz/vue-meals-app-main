@@ -22,7 +22,7 @@ To run this application locally, follow these steps:
 
 1. Clone the repository:
 
-`git clone https://github.com/your-username/recipe-app.git`
+`git clone https://github.com/ofek-harpaz/recipe-app.git`
 
 2. Install dependencies:
 
